@@ -1,0 +1,310 @@
+/*_______________________________*/
+/*----------- COLORS -----------*/
+/*GREEN :               #1A8A7E */
+/*DARK GREY (fonts) :   #706E6E */
+/*LIGHT GREY (bg form): #DCE3D7 */
+/*MEDIUM GREY (input) : #C2C6BD */
+/*______________________________*/
+
+
+
+/*--------- GLOBAL ---------*/
+body{
+  margin: auto;
+  font-family: 'Oxygen', sans-serif;
+  color: #706E6E;
+
+  /*partie temporaire, plus tard site en arrière plan de la modal*/
+  background-image: url('../img/fotolia_119805544.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*--------- MODAL FORM ---------*/
+/* Général _____________________*/
+
+/* Modal (background) */
+#modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(90, 100, 103, 0.7);
+}
+
+/* Modal Content/Box */
+.modalContent {
+  width: 40%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*--------- TITRES ---------*/
+/* Général _____________________*/
+.headerModal {
+  display: flex;
+  justify-content: space-between;
+}
+/*Close modal button*/
+.close {
+  width: 35px;
+  height: 35px;
+  border: solid 2px #1A8A7E;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.close:before, .close:after{
+  content:'';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: #1A8A7E;
+  border-radius: 2px;
+  top: 17px;
+}
+
+.close:before{
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  transform:rotate(45deg);
+  left: 5px;
+}
+.close:after{
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+  right: 5px;
+}
+
+.titleForm,
+.subtitleForm {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  padding-left: 20px;
+}
+
+.title {
+  color: #1A8A7E;
+  font-size: 1.2em;
+}
+
+.subtitle {
+  font-size: 0.8em;
+}
+
+.title.bold {
+  font-weight: bold;
+  font-size: 1.4em;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/*--------- FORM ---------*/
+
+/* Général _____________________*/
+
+/*Formulaires*/
+form {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #DCE3D7;
+  border-radius: 20px;
+}
+
+.formElement {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.large {
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+input {
+  height: 30px;
+  background-color: #C2C6BD;
+  border: solid 1px #C2C6BD;
+  border-radius: 5px;
+}
+
+input,
+input:focus {
+  padding-left: 10px;
+  color: #706E6E;
+}
+
+input:focus {
+  border: solid 1px #878787;
+}
+/*////////////////////////*/
+/*bouton temporaire link*/
+/*////////////////////////*/
+a.btnSubmit {
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  vertical-align: center;
+}
+/*////////////////////////*/
+
+.btnSubmit {
+  margin: 20px 0 10px 0;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  background-color: #1A8A7E;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btnSubmit:hover,
+.btnSubmit:focus {
+  background-color: #5aada4;
+}
+
+/* Mise en forme particulière _____________________*/
+
+/*Connexion espace entreprise/inscription //////////////////////////////*/
+.connect {
+  width: 60%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+.connect p {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.filet {
+  border-top: solid 2px #1A8A7E;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  margin: 30px 0;
+}
+
+.filet p {
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #1A8A7E;
+  background-color: #DCE3D7;
+  font-weight: bold;
+  line-height: 2em;
+  left: 40%;
+  top: -1.7em;
+  width: 20%;
+}
+
+/*Inscription html 1-5 //////////////////////////////*/
+/*Code postal + Tel*/
+.small.left {
+  width: 35%;
+}
+
+/*Ville + Mail*/
+.small.right{
+  width: 60%;
+}
+
+/*Inscription html 2-5 //////////////////////////////*/
+/*Bouton Switch ______________________*/
+.formElement.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* The switch - the box around the slider */
+.switch {
+ position: relative;
+ display: inline-block;
+ width: 60px;
+ height: 34px;
+ margin-left: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: #ccc;
+ -webkit-transition: .4s;
+ transition: .4s;
+}
+
+.slider:before {
+ position: absolute;
+ content: "";
+ height: 26px;
+ width: 26px;
+ left: 4px;
+ bottom: 4px;
+ background-color: white;
+ -webkit-transition: .4s;
+ transition: .4s;
+}
+
+input:checked + .slider {
+ background-color: #5aada4;
+}
+
+input:focus + .slider {
+ box-shadow: 0 0 1px #5aada4;
+}
+
+input:checked + .slider:before {
+ -webkit-transform: translateX(26px);
+ -ms-transform: translateX(26px);
+ transform: translateX(26px);
+}
+
+.slider.round {
+ border-radius: 34px;
+}
+
+.slider.round:before {
+ border-radius: 50%;
+}
+/*/////////////////////////////////////////////*/
