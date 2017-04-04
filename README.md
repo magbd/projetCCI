@@ -10,7 +10,9 @@ https://projects.invisionapp.com/share/NQB0BWMVX#/screens/220853901_accueil
 
 |- css/
 
-    |- style.css
+    |- style.css    => styles custom
+    |- main.css     => styles du thème à suivre
+    |- media.css    => media queries
     
 |- html/
 
