@@ -5,10 +5,14 @@
   <meta charset="utf-8">
   <title>AVR34</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Oxygen|Work+Sans:700" rel="stylesheet">
+  <!-- Styles CSS des classes du thème -->
+  <link rel="stylesheet" href="../../../css/main.css">
+  <!-- Mises en formes particulières -->
   <link rel="stylesheet" href="../../../css/style.css">
-
-
+  <!-- Responsive / Media query -->
+  <link rel="stylesheet" type="text/css" href="../../../css/media.css">
 </head>
+
 <body>
 
   <!-- Modal form-->
@@ -17,8 +21,8 @@
     <!-- Modal content -->
     <div class="modalContent">
 
-      <div class="headerModal">
-        <div>
+      <div class="headerModal d-flex-row">
+        <div class="d-flex-column">
           <!-- Title -->
           <div class="titleForm">
             <h3 class="title bold">Je m'inscris</h3>
@@ -30,8 +34,9 @@
             <p class="subtitle">Activitée(s) de l'entreprise</p>
           </div>
         </div>
+        
         <!-- Close modal button -->
-        <div class="close"></div>
+        <div id="btnClose"></div>
 
       </div>
 

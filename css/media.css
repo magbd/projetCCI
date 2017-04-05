@@ -1,0 +1,29 @@
+@media screen and (max-device-width:980px) {
+  #carousel {
+    height: 350px;
+  }
+
+  .articles {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .article-un,
+    .article-deux {
+    width: 100%;
+  }
+
+  #btn-video {
+    width: 100%;
+  }
+
+  .base-triangle {
+    height: 40px;
+  }
+
+  .text-triangle {
+    font-size: .8em;
+  }
+}

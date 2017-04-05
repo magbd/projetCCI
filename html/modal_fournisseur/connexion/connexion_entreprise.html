@@ -3,9 +3,14 @@
 <head>
   <link rel="icon" type="image/png" href="../../../img/favicon.png">
   <meta charset="utf-8">
-  <title>AVR34</title>
+  <title>AVR-34</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Oxygen|Work+Sans:700" rel="stylesheet">
+  <!-- Styles CSS des classes du thème -->
+  <link rel="stylesheet" href="../../../css/main.css">
+  <!-- Mises en formes particulières -->
   <link rel="stylesheet" href="../../../css/style.css">
+  <!-- Responsive / Media query -->
+  <link rel="stylesheet" type="text/css" href="../../../css/media.css">
 </head>
 <body>
 
@@ -15,23 +20,25 @@
     <!-- Modal content -->
     <div class="modalContent">
 
-      <div class="headerModal">
-        <div>
+
+
+      <div class="headerModal d-flex-row">
+        
           <!-- Title -->
           <div class="titleForm">
             <h3 class="title bold">Je me connecte</h3>
             <p class="title">Comme entreprise RSE</p>
           </div>
-        </div>
+
         <!-- Close modal button -->
-        <div class="close"></div>
+        <div id="btnClose"></div>
 
       </div>
 
       <!-- Form -->
-      <form class="connect" action="index.html" method="post">
+      <form class="connect" action="" method="post">
 
-        <p>j'ai déjà un compte entreprise RSE</p>
+        <p class="text-grey">j'ai déjà un compte entreprise RSE</p>
         <!-- <input class="btnSubmit large" type="submit" name="btnSubmit" value="accédez à votre espace"> -->
         <a href="#" class="btnSubmit">accédez à votre espace</a>
 
@@ -39,7 +46,7 @@
           <p>ou</p>
         </div>
 
-        <p>je souhaite rejoindre le réseau AVR34</p>
+        <p class="text-grey">je souhaite rejoindre le réseau AVR34</p>
         <!-- <input class="btnSubmit large" type="submit" name="btnSubmit" value="je m'inscris"> -->
         <a href="../inscription/inscription1-5.html" class="btnSubmit">je m'inscris</a>
 

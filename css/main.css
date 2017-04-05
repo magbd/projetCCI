@@ -1,0 +1,389 @@
+/*_______________________________*/
+/*----------- COLORS -----------*/
+/*GREEN :               #1A8A7E */
+/*DARK GREY (fonts) :   #706E6E */
+/*LIGHT GREY (bg form): #DCE3D7 */
+/*MEDIUM GREY (input) : #C2C6BD */
+/*______________________________*/
+
+
+/*--------- GLOBAL ---------*/
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  margin: auto 0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  padding: 15px;
+  position: relative;
+}
+
+
+/*Positionement FlexBox*/
+.d-flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d-flex-row.horizontal-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.d-flex-row.vertical-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.d-flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.d-flex-column.vertical-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.d-flex-column.horizontal-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-center {
+  margin: auto;
+}
+
+
+/*Général textes*/
+p {
+  margin: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+/*Couleurs textes*/
+.text-brand {
+  color: #1a8a7e;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-grey {
+  color: #706e6e;
+}
+
+.text-purple {
+  color: #944389;
+}
+
+/*--------- NAVBAR ---------*/
+nav {
+  background-color: #dbe3d6;
+  display: flex;
+  /*width: 70%;*/
+}
+nav .container {
+  /*justify-content: space-between;*/
+  height: 80px;
+  padding: 0;
+  margin-bottom: 15px;
+}
+/*Logo*/
+.logoAVR {
+  width: 60%;
+}
+.logoAVR img {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.logoAVR div p:first-child {
+  font-size: 1.2em;
+}
+
+.logoAVR div p:last-child {
+  font-size: 0.8em;
+}
+
+/*Liens*/
+nav ul {
+  padding: 0;
+  margin: 0;
+  width: 40%;
+  justify-content: space-between;
+}
+nav ul li {
+  display: block;
+  width: 33%;
+  height: 100%;
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+nav ul li a {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.6em;
+  text-decoration: none;
+  font-weight: bold;
+  height: 100%;
+}
+nav ul li a img {
+  height: 15px;
+  margin-bottom: 10px;
+}
+
+.nav-selected {
+  background-color: #EFEFEF;
+}
+nav ul li a:hover {
+  background-color: #EFEFEF;
+}
+
+/*--------- BOUTONS ---------*/
+/*Boutons bordure*/
+.btn {
+  display: block;
+  text-align: center;
+  vertical-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: solid 1px #1a8a7e;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+
+/*Bouton formulaire inscription*/
+.btn-inscription {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 50px;
+  width: 250px;
+  height: 50px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: white;
+  border-radius: 40px;
+  background-color: #1a8a7e;
+}
+
+.btn-inscription:hover {
+  color: #1a8a7e;
+  background-color: white;
+}
+
+/*--------- HEADER ---------*/
+header {
+  background-color: #dbe3d6;
+    /*height: 300px;*/
+}
+
+/*--------- MODAL ---------*/
+
+/* Modal (background) */
+#modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(90, 100, 103, 0.7);
+}
+
+/* Modal Content/Box */
+.modalContent {
+  width: 40%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerModal {
+  justify-content: space-between;
+}
+/*Close modal button*/
+/*.close {
+  width: 35px;
+  height: 35px;
+  border: solid 2px #1A8A7E;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.close:before, .close:after{
+  content:'';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: #1A8A7E;
+  border-radius: 2px;
+  top: 17px;
+}
+
+.close:before{
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  transform:rotate(45deg);
+  left: 5px;
+}
+.close:after{
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+  right: 5px;
+}*/
+
+/*Close modal button*/
+#btnClose {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: solid 2px #1a8a7e;
+  border-radius: 50%;
+}
+.btnClose-video {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#btnClose:before,
+#btnClose:after {
+  position: absolute;
+  top: 17px;
+  width: 25px;
+  height: 3px;
+  content: '';
+  border-radius: 2px;
+  background-color: #1a8a7e;
+}
+
+#btnClose:before {
+  left: 5px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#btnClose:after {
+  right: 5px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/*--------- FORM ---------*/
+
+/*Titres*/
+.titleForm,
+.subtitleForm {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  padding-left: 20px;
+}
+
+.title {
+  color: #1A8A7E;
+  font-size: 1.2em;
+}
+
+.subtitle {
+  font-size: 0.8em;
+}
+
+.title.bold {
+  font-weight: bold;
+  font-size: 1.4em;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/*Form et input*/
+form {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #DCE3D7;
+  border-radius: 20px;
+}
+
+.formElement {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.large {
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-bottom: 5px;
+  color: #706e6e;
+}
+
+input {
+  height: 30px;
+  background-color: #C2C6BD;
+  border: solid 1px #C2C6BD;
+  border-radius: 5px;
+}
+
+input,
+input:focus {
+  padding-left: 10px;
+  color: #706E6E;
+}
+
+input:focus {
+  border: solid 1px #878787;
+}
+
+/*--------- FOOTER ---------*/
+footer {
+    /*background-color: #919797;*/
+  background-color: #1f2532;
+}
+
+footer .container .d-flex-row {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer div img {
+  width: 10%;
+}

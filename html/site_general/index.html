@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/png" href="../../img/favicon.png">
+  <meta charset="utf-8">
+  <title>AVR-34</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Oxygen|Work+Sans:700" rel="stylesheet">
+
+  <!-- Styles CSS des classes du thème -->
+  <link rel="stylesheet" href="../../css/main.css">
+  <!-- Mises en formes particulières -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <!-- Responsive / Media query -->
+  <link rel="stylesheet" type="text/css" href="../../css/media.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="container d-flex-row">
+      <!-- Partie gauche de la navbar => logo -->
+      <div class="logoAVR d-flex-row">
+        <img src="../../img/logoAVR34.svg" alt="">
+        <div class="d-flex-column vertical-center">
+          <p class="text-brand bold">AVR-34</p>
+          <p class="text-grey">Votre plateforme d'achats responsables</p>
+        </div>
+      </div>
+
+      <!-- Partie droite de la navbar => liens -->
+      <ul class="d-flex-row vertical-center">
+        <li><a href="#" class="nav-selected text-grey d-flex-column vertical-center"><img src="../../img/homepage.svg" alt="">accueil</a></li>
+        <li><a href="#" class="text-grey d-flex-column vertical-center"><img src="../../img/star.svg" alt="">à propos</a></li>
+        <li><a href="#" class="text-purple d-flex-column vertical-center"><img src="../../img/user.svg" alt="">espace fournisseur</a></li>
+      </ul>
+
+
+    </div>
+  </nav>
+
+  <!-- Modal -->
+  <div id="modal" class="closed">
+    <!-- Modal content -->
+    <div class="modalContent">
+      <!-- Close modal button -->
+      <div id="btnClose" class="btnClose-video"></div>
+      <!-- Lien video -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/iQRm7aciW7w" frameborder="0" allowfullscreen></iframe>
+      <!-- <button id="close">Quitter</button> -->
+    </div>
+  </div>
+
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+
+      <!-- Carousel -->
+
+      <div id="suivant"></div>
+      <div id="precedent"></div>
+
+      <div id="carousel">
+
+        <div id="slide-un" class="slide active">
+          <div class="titre-carou">
+            <p class="text-grey">Qu'est-ce que AVR-34 ?</p>
+          </div>
+          <div id="btn-video" class="d-flex-row vertical-center block-center">
+            <img class="" src="../../img/video.jpg" alt="">
+          </div>
+        </div>
+
+        <div id="slide-deux" class="slide">
+
+          <div class="titre-carou">
+            <p class="text-grey">La presse en parle</p>
+          </div>
+
+          <div class="d-flex-row articles">
+            <div class="d-flex-column article-un">
+              <p class="text-grey nom-journal">Objectif Languedoc-Roussillon</p>
+              <p class="text-brand titre-article">La CCI Hérault lance AVR 34, plate-forme pour acheter responsable</p>
+              <p class="text-grey textes-article">La CCI de l'Hérault a dévoilé, le 3 mars à Pérols (34),
+                un nouvel outil visant à inciter les PME à adopter une démarche RSE dans leur politique d'achats.
+                En accord avec ces principes, plusieurs établissements de formation montpelliérains ont été associés
+                à la conception de cette plate-forme, baptisée AVR 34 [...]
+              </p>
+              <a class="btn btn-article text-brand" href="http://objectif-languedoc-roussillon.latribune.fr/entreprises/commerce-services/2017-03-03/la-cci-herault-lance-avr-34-plate-forme-pour-acheter-responsable.html" target="_blank" >
+                Lire l'article
+              </a>
+            </div>
+            <div class="d-flex-column article-deux">
+              <p class="text-grey nom-journal">Hérault Juridique</p>
+              <p class="text-brand titre-article">La CCI Hérault veut faire entrer la RSE dans les TPE</p>
+              <p class="text-grey textes-article">A la Une de l'Hérault Juridique n° 3143 (23 mars 2017).
+                La Responsabilité Sociétale des Entreprises (RSE) est la responsabilité qu’a une entreprise
+                vis-à-vis des impacts de ses décisions et de ses activités sur la société et sur l’environnement,
+                se traduisant par un comportement transparent et éthique [...]
+              </p>
+              <a class="btn btn-article text-brand" href="https://heraultjuridique.com/entreprises/gestion/cci-herault-veut-faire-entrer-rse-tpe/" target="_blank" >
+                Lire l'article
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- Modal -->
+
+  <!-- Triangle + textes -->
+  <div id="triangle">
+
+    <div class="base-triangle"></div>
+    <div class="triangle-fluid">
+      <div class="triangle-container">
+        <div class="triangle triangle-left"></div>
+        <div class="triangle triangle-right"></div>
+      </div>
+    </div>
+
+    <div class="container-text-absolute">
+      <div class="container">
+        <p class="text-triangle text-white">
+          AVR-34 est une plateforme de mise en relation à but non lucratif. <br>
+          Nous nous engageons à travers cette plateforme, dans le développement de la RSE.
+          Nous offrons un accès simplifié aux achats responsable en prenant en compte des thématiques sociales, territoriales et environnementales.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bouton lien inscription -->
+  <div class="container">
+    <a class="btn btn-inscription block-center" href="#" role="button" target="_blank">J'ai un besoin</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="d-flex-row vertical-center horizontal-center">
+        <img src="../../img/logo_cci.png" alt="">
+        <img src="../../img/logo_upto.png" alt="">
+        <img src="../../img/logo_mbs.png" alt="">
+        <img src="../../img/logo_polytech.png" alt="">
+        <img src="../../img/logo_moma.png" alt="">
+        <img src="../../img/logo_um.png" alt="">
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<script type="text/javascript" src="../../scripts/script.js">
+
+</script>
+</html>

@@ -1,177 +1,287 @@
-/*_______________________________*/
-/*----------- COLORS -----------*/
-/*GREEN :               #1A8A7E */
-/*DARK GREY (fonts) :   #706E6E */
-/*LIGHT GREY (bg form): #DCE3D7 */
-/*MEDIUM GREY (input) : #C2C6BD */
-/*______________________________*/
-
-
-
-/*--------- GLOBAL ---------*/
-body{
-  margin: auto;
-  font-family: 'Oxygen', sans-serif;
-  color: #706E6E;
-
-  /*partie temporaire, plus tard site en arrière plan de la modal*/
-  background-image: url('../img/fotolia_119805544.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+/*CAROUSEL*/
+/*Boutons*/
+#suivant,
+#precedent {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: solid 3px #1a8a7e;
+  border-radius: 50%;
 }
 
-*{
-  margin: 0;
-  padding: 0;
+#suivant {
+  left: -30px;
 }
 
-/*--------- MODAL FORM ---------*/
-/* Général _____________________*/
+#suivant:before,
+#suivant:after,
+#precedent:before,
+#precedent:after {
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  content: '';
+  border-radius: 2px;
+  background-color: #1a8a7e;
+}
+
+#suivant:before,
+#suivant:after {
+  right: 12px;
+}
+
+#suivant:before {
+  top: 12px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#suivant:after {
+  top: 24px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#precedent {
+  right: -30px;
+}
+
+#precedent:before,
+#precedent:after {
+  left: 12px;
+}
+
+#precedent:before {
+  top: 12px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#precedent:after {
+  top: 24px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/*Carousel*/
+#carousel {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+}
+
+.slide {
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+#slide-un,
+#slide-deux {
+  padding: 0 70px;
+}
+
+#btn-video {
+  width: 50%;
+}
+
+#btn-video img {
+  z-index: 1;
+  width: 100%;
+  cursor: pointer;
+}
+
+#btn-video img:hover {
+  cursor: pointer;
+}
+
+/*Blocks Articles*/
+.titre-carou {
+  margin-bottom: 3%;
+  border-bottom: solid 1px #706e6e;
+}
+
+.titre-carou p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+#slide-deux .d-flex-row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.article-un,
+.article-deux {
+  width: 45%;
+}
+
+/*Mise en forme textes articles*/
+.nom-journal {
+  font-size: .6em;
+  font-weight: bold;
+}
+
+.titre-article {
+  font-size: 1em;
+  margin: 5px 0 10px 0;
+}
+
+.textes-article {
+  font-size: .8em;
+  font-style: italic;
+}
+
+.btn-article {
+  font-size: .8em;
+  font-weight: bold;
+  line-height: 2em;
+  display: block;
+  width: 40%;
+  text-align: center;
+  vertical-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: solid 1px #1a8a7e;
+  border-radius: 20px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.btn-article:hover {
+  color: white;
+  background-color: #1a8a7e;
+}
+
+
+/*--------- MODAL VIDEO ---------*/
 
 /* Modal (background) */
 #modal {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-color: rgba(90, 100, 103, 0.7);
+  background-color: rgba(90, 100, 103, .7);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-/* Modal Content/Box */
+/* Modal Content */
 .modalContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 40%;
   padding: 20px;
+  border-radius: 20px;
   background-color: white;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
 }
 
-/*--------- TITRES ---------*/
-/* Général _____________________*/
-.headerModal {
-  display: flex;
-  justify-content: space-between;
+#modal.closed {
+  display: none;
 }
-/*Close modal button*/
-.close {
-  width: 35px;
-  height: 35px;
-  border: solid 2px #1A8A7E;
-  border-radius: 50%;
+
+#modal.opened {
+  display: true;
+}
+
+#modal iframe {
+  width: 100%;
+}
+
+
+/*--------- TEXTES TRIANGLE ---------*/
+
+/*Forme triangle CSS*/
+#triangle {
   position: relative;
-  cursor: pointer;
 }
-.close:before, .close:after{
-  content:'';
+
+.base-triangle {
+  width: 100%;
+  height: 20px;
+  background-color: #1a8a7e;
+}
+
+.triangle-fluid {
+  overflow: hidden;
+  background-color: #1a8a7e;
+  background-size: cover;
+}
+
+.triangle-container {
+  position: relative;
+  box-sizing: border-box;
+  padding: 5%;
+}
+
+.triangle {
   position: absolute;
-  width: 25px;
-  height: 3px;
-  background-color: #1A8A7E;
-  border-radius: 2px;
-  top: 17px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  background: none;
 }
 
-.close:before{
-  -webkit-transform:rotate(45deg);
-  -moz-transform:rotate(45deg);
-  transform:rotate(45deg);
-  left: 5px;
-}
-.close:after{
-  -webkit-transform:rotate(-45deg);
-  -moz-transform:rotate(-45deg);
-  transform:rotate(-45deg);
-  right: 5px;
+.triangle-left {
+  left: 0;
+  border-top-width: 400px;
+ /* Change this value to vary the angle */
+  border-left-width: 2000px;
+ /* Change this value to vary the angle */
+  border-left-color: #fff;
 }
 
-.titleForm,
-.subtitleForm {
-  text-transform: uppercase;
-  margin-bottom: 1em;
-  padding-left: 20px;
+.triangle-right {
+  right: 0;
+  border-top-width: 400px;
+  border-right-width: 2000px;
+  border-right-color: #fff;
 }
 
-.title {
-  color: #1A8A7E;
-  font-size: 1.2em;
+/*Textes triangle*/
+.container-text-absolute {
+  position: absolute;
+  top: 0;
 }
 
-.subtitle {
-  font-size: 0.8em;
-}
-
-.title.bold {
-  font-weight: bold;
-  font-size: 1.4em;
-  font-family: 'Work Sans', sans-serif;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-/*--------- FORM ---------*/
-
-/* Général _____________________*/
-
-/*Formulaires*/
-form {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background-color: #DCE3D7;
-  border-radius: 20px;
-}
-
-.formElement {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
-.large {
-  width: 100%;
-}
-
-label {
-  font-weight: bold;
-  font-size: 0.8em;
-  margin-bottom: 5px;
-}
-
-input {
-  height: 30px;
-  background-color: #C2C6BD;
-  border: solid 1px #C2C6BD;
-  border-radius: 5px;
-}
-
-input,
-input:focus {
-  padding-left: 10px;
-  color: #706E6E;
-}
-
-input:focus {
-  border: solid 1px #878787;
-}
-/*////////////////////////*/
-/*bouton temporaire link*/
-/*////////////////////////*/
-a.btnSubmit {
-  width: 100%;
-  text-decoration: none;
+.text-triangle {
+  font-size: 1em;
+  width: 70%;
+  margin: auto;
   text-align: center;
-  line-height: 40px;
-  vertical-align: center;
 }
-/*////////////////////////*/
 
+
+/*--------- MODAL FORMULAIRES ---------*/
+/*Boutons submit*/
 .btnSubmit {
   margin: 20px 0 10px 0;
   text-transform: uppercase;
@@ -193,7 +303,17 @@ a.btnSubmit {
   background-color: #5aada4;
 }
 
-/* Mise en forme particulière _____________________*/
+/*////////////////////////*/
+/*bouton temporaire link*/
+/*////////////////////////*/
+a.btnSubmit {
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  vertical-align: center;
+}
+/*////////////////////////*/
 
 /*Connexion espace entreprise/inscription //////////////////////////////*/
 .connect {
@@ -307,4 +427,3 @@ input:checked + .slider:before {
 .slider.round:before {
  border-radius: 50%;
 }
-/*/////////////////////////////////////////////*/
